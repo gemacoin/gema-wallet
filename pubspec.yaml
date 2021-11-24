@@ -13,7 +13,7 @@ dependencies:
   solana: 
     git: 
       url: git://github.com/ManojSharma5500/cryptoplease-dart.git
-      path: packages/solana
+      path: packages/gemachain
   redux: ^5.0.0
   flutter_redux: ^0.8.2
   redux_persist: ^0.9.0
