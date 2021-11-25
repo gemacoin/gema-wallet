@@ -10,7 +10,7 @@ dependencies:
   flutter:
     sdk: flutter
   cupertino_icons: ^1.0.2
-  solana: 
+  gemachain:
     git: 
       url: git://github.com/ManojSharma5500/cryptoplease-dart.git
       path: packages/gemachain
