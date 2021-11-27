@@ -155,55 +155,55 @@ class HomeTabBodyState extends State<HomeTabBody> {
               ],
             ),
           ),
-          StoreConnector<AppState, Tuple2<bool, String>>(converter: ((store) {
-            Account? account = store.state.accounts[accountName];
-            if (account != null) {
-              String usdBalance = account.usdtBalance.toString();
-              // Cut some numbers to make it easier to read
-              if (usdBalance.length >= 6) {
-                usdBalance = usdBalance.substring(0, 6);
-              }
-              /*
-               * If the GEMA balance is 0.0 the USD equivalent will always be 0.0 too, so,
-               * in order to prevent an infinite loading animation, it makes sure that the GEMA balance is at least > 0.0,
-               * if not, it will just display 0.0
-               */
-              bool shouldRenderSpinner =
-                  account.balance > 0.0 && account.usdtBalance == 0.0;
-              return Tuple2(shouldRenderSpinner, usdBalance);
-            } else {
-              return Tuple2(false, "");
-            }
-          }), builder: (context, value) {
-            bool shouldRenderSpinner = value.item1;
-            String usdBalance = value.item2;
-
-            if (shouldRenderSpinner) {
-              return Container(
-                width: 35,
-                height: 35,
-                child: CircularProgressIndicator(
-                  strokeWidth: 3.0,
-                  semanticsLabel: 'Loading GEMA USD equivalent value',
-                ),
-              );
-            } else {
-              return Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text(
-                    '$usdBalance\$',
-                    style: GoogleFonts.lato(
-                      textStyle: TextStyle(
-                        fontSize: 25,
-                        fontWeight: FontWeight.w900,
-                      ),
-                    ),
-                  )
-                ],
-              );
-            }
-          }),
+          // StoreConnector<AppState, Tuple2<bool, String>>(converter: ((store) {
+          //   Account? account = store.state.accounts[accountName];
+          //   if (account != null) {
+          //     String usdBalance = account.usdtBalance.toString();
+          //     // Cut some numbers to make it easier to read
+          //     if (usdBalance.length >= 6) {
+          //       usdBalance = usdBalance.substring(0, 6);
+          //     }
+          //     /*
+          //      * If the GEMA balance is 0.0 the USD equivalent will always be 0.0 too, so,
+          //      * in order to prevent an infinite loading animation, it makes sure that the GEMA balance is at least > 0.0,
+          //      * if not, it will just display 0.0
+          //      */
+          //     bool shouldRenderSpinner =
+          //         account.balance > 0.0 && account.usdtBalance == 0.0;
+          //     return Tuple2(shouldRenderSpinner, usdBalance);
+          //   } else {
+          //     return Tuple2(false, "");
+          //   }
+          // }), builder: (context, value) {
+          //   bool shouldRenderSpinner = value.item1;
+          //   String usdBalance = value.item2;
+          //
+          //   if (shouldRenderSpinner) {
+          //     return Container(
+          //       width: 35,
+          //       height: 35,
+          //       child: CircularProgressIndicator(
+          //         strokeWidth: 3.0,
+          //         semanticsLabel: 'Loading GEMA USD equivalent value',
+          //       ),
+          //     );
+          //   } else {
+          //     return Row(
+          //       mainAxisAlignment: MainAxisAlignment.center,
+          //       children: [
+          //         Text(
+          //           '$usdBalance\$',
+          //           style: GoogleFonts.lato(
+          //             textStyle: TextStyle(
+          //               fontSize: 25,
+          //               fontWeight: FontWeight.w900,
+          //             ),
+          //           ),
+          //         )
+          //       ],
+          //     );
+          //   }
+          // }),
           Padding(
             padding: EdgeInsets.all(30),
             child: Row(

@@ -19,7 +19,7 @@ class AccountSubPage extends StatelessWidget {
       length: accounts.length,
       child: Scaffold(
         appBar: AppBar(
-          title: const Text("Gemachain wallet"),
+          title: const Text("Gema wallet"),
           actions: <Widget>[
             IconButton(
               icon: Icon(
@@ -136,7 +136,7 @@ class SettingsSubPageState extends State<SettingsSubPage> {
           ),
           Card(
             child: ListTile(
-                title: const Text('Made by Gemacoin Foundation'),
+                title: const Text('Made by Gema Foundation'),
                 trailing: Icon(Icons.info_outline)),
           )
         ],

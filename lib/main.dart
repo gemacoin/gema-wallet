@@ -40,7 +40,7 @@ class App extends StatelessWidget {
     return StoreProvider<AppState>(
       store: this.store,
       child: MaterialApp(
-        title: 'Gemachain wallet',
+        title: 'Gemawallet',
         theme: ThemeData(
           primarySwatch: Colors.indigo,
         ),

@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
+x
 const options = [
   'Mainnet-beta (default)',
   'Devnet',
@@ -9,9 +9,9 @@ const options = [
 ];
 
 const urlOptions = {
-  'Mainnet-beta (default)': 'http://99.20.20.233:8899',
-  'Devnet': 'http://99.20.20.233:8899',
-  'Testnet': 'http://99.20.20.233:8899',
+  'Mainnet-beta (default)': 'http://99.20.20.232:8899',
+  'Devnet': 'http://99.20.20.232:8899',
+  'Testnet': 'http://99.20.20.232:8899',
   'Custom': '',
 };
 

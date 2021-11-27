@@ -1,6 +1,6 @@
-## Solana Mobile Wallet
+## Gemachain Mobile Wallet
 
-A mobile wallet for Solana made in flutter
+A mobile wallet for Gemachain made in flutter
 
 Features:
 - Watch over any address
@@ -27,7 +27,7 @@ TODO / Ideas:
 WIP.
 
 ### Support this project
-You can support this project by donating any ammount you want to this **Solana** address: 
+You can support this project by donating any ammount you want to this **Gemachain** address: 
 
 `u5GzDDXyzhB9zA8vSHuEow5mQJ6Tk3kC4Bn2T9dp6nX3U`
 
